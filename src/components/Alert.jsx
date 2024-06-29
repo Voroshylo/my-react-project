@@ -1,33 +1,27 @@
-const alertStyles = {
-  margin: 8,
-  padding: "12px 16px",
-  borderRadius: 4,
-  color: "white",
-};
+import '../css/Alert.css'
+import { HiUser } from "react-icons/hi";
 
-const getBgColor = variant => {
-  switch (variant) {
-    case "info":
-      return "blue";
-    case "success":
-      return "green";
-    case "error":
-      return "red";
-    case "warning":
-      return "orange";
-    default:
-      throw new Error(`Unsupported variant prop value - ${variant}`);
-  }
-};
+// import clsx from 'clsx';
 
-export const Alert = ({ variant, children }) => {
+// const getBgColor = variant => {
+//   switch (variant) {
+//     case "info":
+//       return "blue";
+//     case "success":
+//       return "green";
+//     case "error":
+//       return "red";
+//     case "warning":
+//       return "orange";
+//     default:
+//       throw new Error(`Unsupported variant prop value - ${variant}`);
+//   }
+// };
+
+export const Alert = ({ name, children }) => {
+
   return (
-    <p
-      style={{
-        ...alertStyles,
-        backgroundColor: getBgColor(variant),
-      }}
-    >
+    <p className={CSS.alert}><HiUser className='my-icon' size='24'/> {name}
       {children}
     </p>
   );

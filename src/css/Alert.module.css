@@ -1,0 +1,27 @@
+.alert {
+  cursor: progress;
+  margin: 8px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  background-color: azure;
+  color: rgb(2, 253, 43);
+}
+.my-icon {
+  color: blueviolet;
+}
+
+.alert.info {
+  background-color: blue;
+}
+
+.alert.success {
+  background-color: green;
+}
+
+.alert.error {
+  background-color: red;
+}
+
+.alert.warning {
+  background-color: rgb(111, 0, 255);
+}
