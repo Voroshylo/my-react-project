@@ -6,7 +6,7 @@
   background-color: azure;
   color: rgb(2, 253, 43);
 }
-.my-icon {
+.myIcon {
   color: blueviolet;
 }
 
@@ -24,4 +24,20 @@
 
 .alert.warning {
   background-color: rgb(111, 0, 255);
+}
+.btn {
+box-shadow: 12px 4px 21px -4px rgba(255, 0, 0, 1);
+  cursor: pointer;
+  width: 148px;
+  height: 60px;
+  border: none;
+  border-radius: 8px;
+  background-color: aqua;
+  color: blueviolet;
+  margin-right: 20px;
+  &:hover, &:focus{
+  background-color: aquamarine;
+box-shadow: 8px 8px 24px 0px rgba(13, 194, 131, 1);
+  color: black;
+  }
 }

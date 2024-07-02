@@ -1,4 +1,4 @@
-import '../css/Alert.css'
+import css from '../css/Alert.module.css'
 import { HiUser } from "react-icons/hi";
 
 // import clsx from 'clsx';
@@ -18,14 +18,15 @@ import { HiUser } from "react-icons/hi";
 //   }
 // };
 
-export const Alert = ({ name, children }) => {
+const Alert = ({ name, children }) => {
+
 
   return (
-    <>
-      <button onClick={() => alert('Hello Sergey!!!')}>click me!</button>
-    <p className={CSS.alert}><HiUser className='my-icon' size='24'/> {name}
+    <p className={css.alert}><HiUser className={css.myIcon} size='24'/> {name}
       {children}
       </p>
-      </>
+  
   );
 };
+
+export default Alert

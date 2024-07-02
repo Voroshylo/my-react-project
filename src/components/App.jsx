@@ -1,11 +1,13 @@
 
 
-import { Alert } from "./Alert";
+import Alert from "./Alert";
+import Button from "./Buttons"
+
 
 const App = () => {
   return (
     <>
-      <Alert variant="info">
+      <Alert variant='info'>
         Would you like to browse our recommended products?
       </Alert>
       <Alert variant="error">
@@ -17,7 +19,10 @@ const App = () => {
       <Alert variant="warning">
         Please update your profile contact information
       </Alert>
-    </>
+      <Button>
+      </Button>
+</>
+    
   );
 };
 export default App
