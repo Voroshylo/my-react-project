@@ -21,8 +21,11 @@ import { HiUser } from "react-icons/hi";
 export const Alert = ({ name, children }) => {
 
   return (
+    <>
+      <button onClick={() => alert('Hello Sergey!!!')}>click me!</button>
     <p className={CSS.alert}><HiUser className='my-icon' size='24'/> {name}
       {children}
-    </p>
+      </p>
+      </>
   );
 };
