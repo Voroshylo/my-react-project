@@ -16,7 +16,10 @@ const Button = () => {
     <>
       <p>Current: {clicks}</p>
       <button className={css.btn} onClick={handleToggle}>{ isOpen ? 'Hide' : 'Show'}</button>
-      {isOpen && <button className={css.btn} onClick={handleClick}>klick</button>}
+      {isOpen &&
+        <button className={css.btn} onClick={handleClick}>Current: { clicks}</button>
+        
+      }
     </>
   )
 }
