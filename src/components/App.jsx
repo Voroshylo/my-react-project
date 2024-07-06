@@ -2,7 +2,7 @@
 
 import Alert from "./Alert";
 import Button from "./Buttons"
-import Obj from './Objekt'
+// import Obj from './Objekt'
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
       <Button>
       </Button>
 
-      <Obj></Obj>
+      {/* <Obj></Obj> */}
 </>
     
   );

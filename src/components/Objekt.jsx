@@ -4,7 +4,7 @@ const Obj = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       console.log(`interval - ${Date.now()}`)
-    },2000)
+    })
     return () => {
       clearInterval(intervalId)
     };
@@ -12,4 +12,4 @@ const Obj = () => {
 
   return<div>Obj</div>
 }
-export default Obj
+// export default Obj

@@ -7,8 +7,8 @@ const Button = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [clicks, setClicks] = useState(0);
   useEffect(() => {
-    document.title = `you clicked ${clicks} times`
-  })
+    window.localStorage.setItem('save click', clicks)
+  },[clicks])
   // const handleClick = () => {
   //   setClicks(clicks + 1)
   // }
@@ -23,6 +23,7 @@ const Button = () => {
         <button className={css.btn} onClick={() => setClicks(clicks + 1)}>You clicked {clicks} times</button>
         
       }
+      <button className={css.btn} onClick={()=>setClicks(0)}>Reset</button>
     </>
   )
 }
