@@ -1,0 +1,22 @@
+.div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.a{
+   background-image: linear-gradient(#FE5568 50%, #FE5568 50%), linear-gradient(silver 50%, silver 50%);
+   background-position: center bottom;
+   background-repeat: no-repeat;
+   background-size: 0 2px, 100% 2px;
+   color: #0960ac;
+   padding-bottom: 3px;
+   transition: .5s ease-in-out;
+
+&:hover, &:focus {
+   background-size: 100% 2px, 100% 2px;
+   color: #FE5568;
+}
+}

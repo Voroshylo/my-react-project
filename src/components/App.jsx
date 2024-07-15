@@ -1,8 +1,8 @@
 
-
+import Axios from "./Axios";
 import Alert from "./Alert";
 import Button from "./Buttons"
-// import Obj from './Objekt'
+
 
 const App = () => {
   return (
@@ -21,8 +21,7 @@ const App = () => {
       </Alert>
       <Button>
       </Button>
-
-      {/* <Obj></Obj> */}
+      <Axios/>
 </>
     
   );
