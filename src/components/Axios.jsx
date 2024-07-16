@@ -2,25 +2,25 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import css from '../css/Axios.module.css'
 import ArticleList from "./ArticleList";
-import {BallTriangle} from 'react-loader-spinner'
+import { BallTriangle } from 'react-loader-spinner'
+import { fetchArticlesWithTopic } from "../articles-api";
 
 const Axios = () => {
   
   const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(false)
   
   useEffect(() => {
     async function fetchArticles() {
       try {
         setLoading(true);
         
-        const response = await axios.get(
-          "https://hn.algolia.com/api/v1/search?query=react"
-        );
-        console.log(response)
-        setArticles(response.data.hits)
+        const data = await fetchArticlesWithTopic('react')
+        setArticles(data);
+      
       } catch (error) {
-        
+        setError(true)
       } finally {
         setLoading(false)
       }
