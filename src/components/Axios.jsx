@@ -4,6 +4,7 @@ import css from '../css/Axios.module.css'
 import ArticleList from "./ArticleList";
 import { BallTriangle } from 'react-loader-spinner'
 import { fetchArticlesWithTopic } from "../articles-api";
+import SearchForm from "./SearchForm";
 
 const Axios = () => {
   
@@ -11,6 +12,19 @@ const Axios = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
   
+  const handleSearch = async (topic) => {
+    try {
+      setArticles([]);
+      setError(false);
+      setLoading(true);
+      const data = await fetchArticlesWithTopic(topic);
+      setArticles(data);
+    } catch (error) {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
+  }
   useEffect(() => {
     async function fetchArticles() {
       try {
@@ -31,6 +45,7 @@ const Axios = () => {
   return (
     <div className={css.div}>
       <h1>Latest articles</h1>
+      <SearchForm onSearch={handleSearch}/>
       {loading && <BallTriangle
   height={100}
   width={100}
@@ -42,6 +57,7 @@ const Axios = () => {
   visible={true}
   />}
       {articles.length > 0 && <ArticleList items={articles} />}
+      
     </div>
   );
 };
