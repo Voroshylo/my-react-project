@@ -2,6 +2,7 @@
 import Axios from "./Axios";
 import Alert from "./Alert";
 import Button from "./Buttons"
+import Player from "./Huks";
 
 
 
@@ -25,7 +26,8 @@ const App = () => {
       </Button>
   
     
-      <Axios/>
+      <Axios />
+      <Player/>
 </>
     
   );
