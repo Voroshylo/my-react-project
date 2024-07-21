@@ -13,7 +13,7 @@ const SearchForm = ({ onSearch }) => {
     <div className={css.div}>
       <form onSubmit={handleSubmit}>
     <label className={css.label}>
-      <span className={css.cpan}>
+      <span className={css.span}>
         Search
       </span>
     </label>
