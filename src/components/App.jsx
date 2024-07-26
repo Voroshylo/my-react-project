@@ -2,7 +2,11 @@
 import Axios from "./Axios";
 import Alert from "./Alert";
 import Button from "./Buttons"
-import Player from "./Huks";
+import Routers from "../components/nav/Routers";
+import { Routes, Route } from "react-router-dom";
+// import Axios from 'path/to/pages/Axios'
+// import Alert from 'path/to/pages/Alert'
+// import Button from 'patch/to/pages/Button'
 
 
 
@@ -10,6 +14,8 @@ import Player from "./Huks";
 const App = () => {
   return (
     <>
+      <Routers/>
+      {/* <Routes> */}
       <Alert variant='info'>
         Would you like to browse our recommended products?
       </Alert>
@@ -24,10 +30,12 @@ const App = () => {
       </Alert>
       <Button>
       </Button>
-  
-    
-      <Axios />
-      <Player/>
+        <Axios />
+        {/* <Route path="/" element={<Alert />} />
+        <Route path="/about" element={<Button />} />
+        <Route path="/products" element={<Axios />} />
+        <Route path="*" element={<NotFound />} />
+        </Routes> */}
 </>
     
   );
